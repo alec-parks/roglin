@@ -1,7 +1,7 @@
 package roglin
 
-import javax.swing.JFrame
 import asciiPanel.AsciiPanel
+import javax.swing.JFrame
 
 fun main(args: Array<String>){
     val app = ApplicationMain()
