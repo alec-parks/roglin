@@ -11,11 +11,11 @@ class PlayScreen() : Screen {
     }
 
     override fun respondToUserInput(key: KeyEvent): Screen {
-        when (key.keyCode){
+        when (key.keyCode) {
             KeyEvent.VK_ESCAPE -> return LoseScreen()
             KeyEvent.VK_ENTER -> return WinScreen()
+            else -> return this
         }
-        return this
     }
 
 }
