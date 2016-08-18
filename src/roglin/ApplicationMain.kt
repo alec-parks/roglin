@@ -23,14 +23,12 @@ class ApplicationMain(): JFrame(), KeyListener {
 
     override fun keyReleased(e: KeyEvent?) {}
 
-    private val terminal: AsciiPanel
-    private lateinit var screen: Screen
+    private val terminal = AsciiPanel()
+    private var screen: Screen = StartScreen()
 
     init {
-        terminal = AsciiPanel()
         add(terminal)
         pack()
-        screen = StartScreen()
         addKeyListener(this)
         repaint()
     }

@@ -10,8 +10,6 @@ class WinScreen(): Screen{
         terminal.writeCenter("-- press [enter] to play again --",22)
     }
 
-    override fun respondToUserInput(key: KeyEvent): Screen {
-        return if(key.keyCode == KeyEvent.VK_ENTER) PlayScreen() else this
-    }
+    override fun respondToUserInput(key: KeyEvent) = if(key.keyCode == KeyEvent.VK_ENTER) PlayScreen(80,21) else this
 
 }
